@@ -43,9 +43,9 @@ test('correction invalidates results, preserves original evidence and compares f
  state={...state,review:{approved:true}};
  state=editSession(state,'row-1','end_at','2026-10-01T11:30:00+08:00');
  assert.equal(isCurrent(state),false); assert.equal(state.review,null); assert.equal(state.original[0].end_at,'2026-10-01T12:00:00+08:00');
- state=inspectSession(state); assert.equal(isCurrent(state),true); assert.equal(state.originalResult.problems.length,1); assert.equal(state.draftResult.problems.length,0);
+ state=inspectSession(state); assert.equal(isCurrent(state),true); assert.equal(state.originalResult.problems.length,2); assert.equal(state.draftResult.problems.length,1);
  assert.equal(compareProblems(state.originalResult,state.draftResult).resolved.length,1); assert.equal(diffRows(state.original,state.draft).length,1);
- state=resetDraft(state); assert.equal(isCurrent(state),false); assert.equal(diffRows(state.original,state.draft).length,0); assert.equal(inspectSession(state).draftResult.problems.length,1);
+ state=resetDraft(state); assert.equal(isCurrent(state),false); assert.equal(diffRows(state.original,state.draft).length,0); assert.equal(inspectSession(state).draftResult.problems.length,2);
 });
 test('later edits cannot reuse a successful check; imported text is not evaluated',()=>{
  let state=inspectSession(newSession(sample('clean'),'sample'));
@@ -53,3 +53,4 @@ test('later edits cannot reuse a successful check; imported text is not evaluate
  assert.throws(()=>editSession(state,'row-1','record_id','evil'));
  state=editSession(state,'row-1','end_at','bad'); state=inspectSession(state); assert.equal(compareProblems(state.originalResult,state.draftResult).introduced.length,1);
 });
+

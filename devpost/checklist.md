@@ -10,7 +10,7 @@ Build mode: fast（已随构建顺序确认；自动验证各片，保留首片�
 
 ## Slices
 
-- [ ] **1. 发现排期冲突并在草案修正**
+- [x] **1. 发现排期冲突并在草案修正**
   Becomes usable: 打开工作台，导入合成配置，看到冲突及双方依据，修改结束时间后复查并看到前后差异。
   Why now: 第一片就证明发现与修正闭环，避免先做装饰性仪表盘。
   PRD ref: `prd.md > Configuration checks`, `prd.md > Draft correction and comparison`
@@ -41,7 +41,7 @@ Build mode: fast（已随构建顺序确认；自动验证各片，保留首片�
   Commit: `Add review reports and reproducible local delivery`
 
 ## Hands-on Checkpoints
-- [ ] Early usable behavior explored — 第一片后反馈操作与布局。
+- [x] Early usable behavior explored — 第一片后反馈操作与布局。
 - [ ] Final kick-the-tires exploration and feedback completed
 
 ## Final Review
@@ -64,3 +64,4 @@ Activity mode: 待实际试用。
 第一片实现及机械验证完成：9项测试、构建、浏览器修正闭环与CSV导入通过，证据见docs/QA-SLICE1.md。当前停在首片用户试用反馈，主复选框暂不勾选；不是等待重复批准技术方案。
 
 2026-10-02：用户首次试用提出模板无法下载，已修复并验证实际落盘；解释产品用途后用户明确要求继续。首片反馈点以该实际反馈结束，不冒称用户已完成全部修正步骤。
+

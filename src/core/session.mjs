@@ -1,5 +1,5 @@
-import { checkRows } from './rules.mjs';
-export const EDITABLE=['activity_id','product_id','name','start_at','end_at','exclusive'];
+import { inspectRows as checkRows } from './checks.mjs';
+export const EDITABLE=['activity_id','product_id','name','start_at','end_at','exclusive','price','discount','cost','fulfillment','fee_percent'];
 export function newSession(rows,source) {
   return {source,original:rows.map(r=>({...r})),draft:rows.map(r=>({...r})),revision:0,originalResult:null,draftResult:null,checkedRevision:null,review:null};
 }
