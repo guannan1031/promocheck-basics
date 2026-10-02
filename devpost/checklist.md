@@ -30,7 +30,7 @@ Build mode: fast（已随构建顺序确认；自动验证各片，保留首片�
   Learner check: 比较优惠30和20两版，点开计算依据，确认看得懂并能手算。
   Commit: `Add explicit unit contribution comparison`
 
-- [ ] **3. 复核记录、报告与可复现交付**
+- [x] **3. 复核记录、报告与可复现交付**
   Becomes usable: 下载包含原始问题和修改依据的HTML/JSON，重新打开报告阅读完整过程。
   Why now: 完成可核查交付和独立复现，供最终验收与后续录屏。
   PRD ref: `prd.md > Review and report`, `prd.md > States and Boundaries`
@@ -52,7 +52,7 @@ Build mode: fast（已随构建顺序确认；自动验证各片，保留首片�
 - [ ] Optional edit and transfer reflection addressed
 - [ ] `devpost/app-map.html` generated from finished code, checked, and shown
 
-Activity and evidence: 尚未构建。
+Activity and evidence: 三片实现已通过机械验证；docs/QA.md记录证据，用户学习回顾待进行。
 Route and stops: 完成实现后填写实际文件与函数。
 Edit outcome: 尚未进行。
 Reflection: 尚未进行。
@@ -68,3 +68,4 @@ Activity mode: 待实际试用。
 
 
 2026-10-02第三片机械验证：18项测试、构建、独立目录安装与浏览器导出复核均通过，见docs/QA.md。最终用户试用待进行；第一片实际反馈为下载失败已修复，不冒称用户亲自验证所有路径。
+
