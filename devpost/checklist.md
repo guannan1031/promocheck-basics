@@ -40,7 +40,7 @@ Build mode: fast（已随构建顺序确认；自动验证各片，保留首片�
   Learner check: 导出一份有待处理项的报告，核对它没有隐去原始告警；修改后旧确认不再适用。
   Commit: `Add review reports and reproducible local delivery`
 
-- [ ] **4. 合成大促方案与共享库存比较**
+- [x] **4. 合成大促方案与共享库存比较**
   Becomes usable: 修改预算、活动日期/销量和到货条件，对比四种分配与不参加基准，查看阻断和库存账，保存恢复计划。
   Why now: 用户要求继续商业方案；先验证约束和算术，真实试点仍待资料。
   PRD ref: `prd.md > Campaign planning slice`
