@@ -49,7 +49,7 @@ export default function App(){
  function check(){setSession(s=>inspectSession(s));}
  const toolbar=<><input ref={fileRef} type="file" accept=".csv,text/csv" onChange={upload} aria-label={t.import} className="sr-only"/><button className="button secondary" disabled={loading} onClick={()=>fileRef.current.click()}><Icon kind="upload"/>{t.import}</button></>;
  return <div className="app-shell">
-  <header className="topbar"><a className="brand" href="#"><span className="brand-mark"><Icon/></span>PromoCheck<span className="version">0.1</span></a><div className="top-actions"><span className="privacy"><Icon kind="shield"/>{t.local}</span><button className="language" onClick={()=>setLang(l=>l==='zh'?'en':'zh')} aria-label={lang==='zh'?'Switch to English':'切换为中文'}>{lang==='zh'?'EN':'中文'}</button></div></header>
+  <header className="topbar"><a className="brand" href="#"><span className="brand-mark"><Icon/></span>PromoCheck<span className="version">0.1</span></a><div className="top-actions"><a href="/">{lang==='zh'?'大促方案比较':'Planning (中文)'}</a><span className="privacy"><Icon kind="shield"/>{t.local}</span><button className="language" onClick={()=>setLang(l=>l==='zh'?'en':'zh')} aria-label={lang==='zh'?'Switch to English':'切换为中文'}>{lang==='zh'?'EN':'中文'}</button></div></header>
   <main>
    <div className="page-heading"><div><h1>{t.title}</h1><p>{t.intro}</p></div><div className="steps"><span className={!session?'active':''}><b>1</b>{t.step1}</span><i>—</i><span className={session&&!current?'active':''}><b>2</b>{t.step2}</span><i>—</i><span className={current?'active':''}><b>3</b>{t.step3}</span></div></div>
    {error&&<div role="alert" className="import-error"><strong>{t.errorTitle}</strong><p>{t.errors[error.code]??t.readError} {error.detail}</p></div>}
@@ -72,8 +72,3 @@ export default function App(){
   </main>
  </div>;
 }
-
-
-
-
-

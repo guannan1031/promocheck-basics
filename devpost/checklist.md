@@ -40,6 +40,16 @@ Build mode: fast（已随构建顺序确认；自动验证各片，保留首片�
   Learner check: 导出一份有待处理项的报告，核对它没有隐去原始告警；修改后旧确认不再适用。
   Commit: `Add review reports and reproducible local delivery`
 
+- [ ] **4. 合成大促方案与共享库存比较**
+  Becomes usable: 修改预算、活动日期/销量和到货条件，对比四种分配与不参加基准，查看阻断和库存账，保存恢复计划。
+  Why now: 用户要求继续商业方案；先验证约束和算术，真实试点仍待资料。
+  PRD ref: `prd.md > Campaign planning slice`
+  Spec ref: `spec.md > Campaign planning slice`
+  Build: 单SKU两活动纯计算模型、中文计划界面、JSON保存恢复；旧检查入口保留。
+  Verify (mechanical): 手算例、缺数据/负贡献/预算/时间/库存/恢复测试，构建，浏览器修改与恢复检查。
+  Learner check: 将B销量改为80，查看亏损；为全部参加补140件，再将到货移到活动之后，查看库存阻断。
+  Commit: `Add campaign allocation planning with stock and budget constraints`
+
 ## Hands-on Checkpoints
 - [x] Early usable behavior explored — 第一片后反馈操作与布局。
 - [ ] Final kick-the-tires exploration and feedback completed
@@ -69,3 +79,16 @@ Activity mode: 待实际试用。
 
 2026-10-02第三片机械验证：18项测试、构建、独立目录安装与浏览器导出复核均通过，见docs/QA.md。最终用户试用待进行；第一片实际反馈为下载失败已修复，不冒称用户亲自验证所有路径。
 
+
+### 2026-10-02 商业方向研究（未实施）
+
+- [x] 公开资料调研与开发方案：docs/planning/MARKET_RESEARCH.md、DEVELOPMENT_PLAN.md。
+- [x] 国内平台商家试点提纲与数据/验收清单：docs/planning/PILOT_PROTOCOL.md。
+- [ ] 真实访谈、脱敏历史资料、现有工具缺口与口径共审。
+- [ ] 按验证后的范围修订scope/prd/spec和后续构建切片。
+- [ ] 库存、预算、活动方案比较、保存恢复与实际复盘实现及验收。
+
+原三片勾选仅代表v0.1能力；新方向不是已完成产品，也不是已有商业效果。
+
+
+2026-10-02用户阅读新方案后要求继续，新增第4片，不把商业验证门槛当作已通过。采用单SKU两活动合成模型验证，规模小于规划中的50SKU商业MVP。27项测试、构建、浏览器修改/下载/实际文件恢复通过，证据docs/QA-PLANNER.md；新片用户试用未完成。库存和候选比较已实现，真实映射和实际复盘仍未实现。

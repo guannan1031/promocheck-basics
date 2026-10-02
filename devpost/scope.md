@@ -49,3 +49,9 @@ A local promotion preflight workbench: inspect configuration risks, compare unit
 
 ## Review
 2026-09-30用户最后明确表示“这个是我认同的，那我们接着下一步”。据此完成scope批准并进入3-prd，不再重复请求scope确认。产品细节与视觉偏好仍在PRD阶段澄清，不能把本次批准扩写成未展示PRD/spec已批准。
+
+## 2026-10-02 Scope revision: campaign planning slice
+
+用户在阅读国内店铺商业研究和开发方案后要求“那你继续”，授权推进新方向；不是商家验证通过。追加一个合成可操作切片作为模型验证，既有v0.1保留。
+
+Unique kernel now includes comparing event allocations against shared stock, dated confirmed inbound, explicit budget and contribution assumptions. First slice is intentionally one SKU / two events / one stock pool, not the proposed full 50-SKU MVP. No native platform rules, automatic execution, real demand forecast or observed ROI. User can edit assumptions, compare candidate plans and restore an exported scenario. Existing preflight remains available.
