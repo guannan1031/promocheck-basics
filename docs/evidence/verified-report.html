@@ -1,0 +1,355 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'"><title>PromoCheck 复核报告</title><style>body{font:14px/1.7 system-ui,sans-serif;max-width:1200px;margin:32px auto;padding:0 20px;color:#182439}h1,h2{color:#245ce0}table{border-collapse:collapse;font-size:12px}td,th{border:1px solid #ddd;padding:8px;text-align:left;overflow-wrap:anywhere}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7fa;padding:12px}.scroll{overflow:auto}.note{background:#fff6de;padding:16px}li{margin:8px 0}</style></head><body><h1>PromoCheck · 复核报告</h1><p>2026-10-02T08:34:08.024Z · promocheck-v2 · 修订 2</p><p>来源: conflict.csv · 合成案例</p><p class="note">单品贡献按每件独立方案计算，费用以优惠后收入为基数，四舍五入到分。不含税、退货、广告及固定成本，不是净利润或实际收益。配置检查不代表平台审核或推荐上线。</p><h2>人工复核</h2><p>未复核</p><h2>原方案</h2><div class="scroll"><table><thead><tr><th>活动 ID</th><th>商品 ID</th><th>活动名称</th><th>开始时间</th><th>结束时间</th><th>显式互斥</th><th>售价</th><th>商家优惠</th><th>商品成本</th><th>履约成本</th><th>费用率</th></tr></thead><tbody><tr><td>AUTUMN-01</td><td>MUG-01</td><td>秋日马克杯 · 午间活动</td><td>2026-10-01T10:00:00+08:00</td><td>2026-10-01T12:00:00+08:00</td><td>true</td><td>100</td><td>30</td><td>60</td><td>10</td><td>5</td></tr><tr><td>MEMBER-02</td><td>MUG-01</td><td>秋日马克杯 · 会员活动</td><td>2026-10-01T11:30:00+08:00</td><td>2026-10-01T13:00:00+08:00</td><td>false</td><td>100</td><td>20</td><td>60</td><td>10</td><td>5</td></tr><tr><td>DESK-03</td><td>MAT-02</td><td>桌面软垫 · 常规活动</td><td>2026-10-01T10:00:00+08:00</td><td>2026-10-01T13:00:00+08:00</td><td>false</td><td>80</td><td>10</td><td>40</td><td>8</td><td>5</td></tr></tbody></table></div><ul><li><b>R004 · block</b> 同商品活动时间重叠，至少一方被标记为互斥 — row-1, row-2 / 商品 ID, 开始时间, 结束时间, 显式互斥<pre>{&quot;product_id&quot;:&quot;MUG-01&quot;,&quot;overlap_start&quot;:&quot;2026-10-01T03:30:00.000Z&quot;,&quot;overlap_end&quot;:&quot;2026-10-01T04:00:00.000Z&quot;,&quot;minutes&quot;:30}</pre></li><li><b>R006 · review</b> 单品贡献为负，需人工处理 — row-1 / 售价, 商家优惠, 商品成本, 履约成本, 费用率</li></ul><h3>单品贡献（CNY / 件）</h3><ul><li>row-1: -3.50</li><li>row-2: 6.00</li><li>row-3: 18.50</li></ul><h2>当前草案</h2><div class="scroll"><table><thead><tr><th>活动 ID</th><th>商品 ID</th><th>活动名称</th><th>开始时间</th><th>结束时间</th><th>显式互斥</th><th>售价</th><th>商家优惠</th><th>商品成本</th><th>履约成本</th><th>费用率</th></tr></thead><tbody><tr><td>AUTUMN-01</td><td>MUG-01</td><td>秋日马克杯 · 午间活动</td><td>2026-10-01T10:00:00+08:00</td><td>2026-10-01T11:30:00+08:00</td><td>true</td><td>100</td><td>20</td><td>60</td><td>10</td><td>5</td></tr><tr><td>MEMBER-02</td><td>MUG-01</td><td>秋日马克杯 · 会员活动</td><td>2026-10-01T11:30:00+08:00</td><td>2026-10-01T13:00:00+08:00</td><td>false</td><td>100</td><td>20</td><td>60</td><td>10</td><td>5</td></tr><tr><td>DESK-03</td><td>MAT-02</td><td>桌面软垫 · 常规活动</td><td>2026-10-01T10:00:00+08:00</td><td>2026-10-01T13:00:00+08:00</td><td>false</td><td>80</td><td>10</td><td>40</td><td>8</td><td>5</td></tr></tbody></table></div><ul><li>未发现已定义的检查问题</li></ul><h3>单品贡献（CNY / 件）</h3><ul><li>row-1: 6.00</li><li>row-2: 6.00</li><li>row-3: 18.50</li></ul><h2>修正前后</h2><p>已解除 2 · 仍存在 0 · 新出现 0</p><ul><li>row-1 / 结束时间: 2026-10-01T12:00:00+08:00 → 2026-10-01T11:30:00+08:00</li><li>row-1 / 商家优惠: 30 → 20</li></ul><p>SHA-256: 588abe217f221739ce318001dbcb75cdab70c322e7c5e5006eb2cc27cf6bdba2<br>指纹仅标识输入内容，不验证来源或复核人身份。</p><details><summary>完整结构化证据（含整数分及时间戳）</summary><pre>{
+  &quot;schema_version&quot;: &quot;promocheck-report-v1&quot;,
+  &quot;language&quot;: &quot;zh&quot;,
+  &quot;generated_at&quot;: &quot;2026-10-02T08:34:08.024Z&quot;,
+  &quot;rule_version&quot;: &quot;promocheck-v2&quot;,
+  &quot;revision&quot;: 2,
+  &quot;source&quot;: {
+    &quot;name&quot;: &quot;conflict.csv&quot;,
+    &quot;synthetic&quot;: true
+  },
+  &quot;input_fingerprint&quot;: {
+    &quot;algorithm&quot;: &quot;SHA-256&quot;,
+    &quot;canonicalization&quot;: &quot;UTF-8 JSON.stringify({original,draft}); array and property order preserved&quot;,
+    &quot;value&quot;: &quot;588abe217f221739ce318001dbcb75cdab70c322e7c5e5006eb2cc27cf6bdba2&quot;
+  },
+  &quot;original&quot;: [
+    {
+      &quot;record_id&quot;: &quot;row-1&quot;,
+      &quot;source_record&quot;: 2,
+      &quot;activity_id&quot;: &quot;AUTUMN-01&quot;,
+      &quot;product_id&quot;: &quot;MUG-01&quot;,
+      &quot;name&quot;: &quot;秋日马克杯 · 午间活动&quot;,
+      &quot;start_at&quot;: &quot;2026-10-01T10:00:00+08:00&quot;,
+      &quot;end_at&quot;: &quot;2026-10-01T12:00:00+08:00&quot;,
+      &quot;exclusive&quot;: &quot;true&quot;,
+      &quot;price&quot;: &quot;100&quot;,
+      &quot;discount&quot;: &quot;30&quot;,
+      &quot;cost&quot;: &quot;60&quot;,
+      &quot;fulfillment&quot;: &quot;10&quot;,
+      &quot;fee_percent&quot;: &quot;5&quot;
+    },
+    {
+      &quot;record_id&quot;: &quot;row-2&quot;,
+      &quot;source_record&quot;: 3,
+      &quot;activity_id&quot;: &quot;MEMBER-02&quot;,
+      &quot;product_id&quot;: &quot;MUG-01&quot;,
+      &quot;name&quot;: &quot;秋日马克杯 · 会员活动&quot;,
+      &quot;start_at&quot;: &quot;2026-10-01T11:30:00+08:00&quot;,
+      &quot;end_at&quot;: &quot;2026-10-01T13:00:00+08:00&quot;,
+      &quot;exclusive&quot;: &quot;false&quot;,
+      &quot;price&quot;: &quot;100&quot;,
+      &quot;discount&quot;: &quot;20&quot;,
+      &quot;cost&quot;: &quot;60&quot;,
+      &quot;fulfillment&quot;: &quot;10&quot;,
+      &quot;fee_percent&quot;: &quot;5&quot;
+    },
+    {
+      &quot;record_id&quot;: &quot;row-3&quot;,
+      &quot;source_record&quot;: 4,
+      &quot;activity_id&quot;: &quot;DESK-03&quot;,
+      &quot;product_id&quot;: &quot;MAT-02&quot;,
+      &quot;name&quot;: &quot;桌面软垫 · 常规活动&quot;,
+      &quot;start_at&quot;: &quot;2026-10-01T10:00:00+08:00&quot;,
+      &quot;end_at&quot;: &quot;2026-10-01T13:00:00+08:00&quot;,
+      &quot;exclusive&quot;: &quot;false&quot;,
+      &quot;price&quot;: &quot;80&quot;,
+      &quot;discount&quot;: &quot;10&quot;,
+      &quot;cost&quot;: &quot;40&quot;,
+      &quot;fulfillment&quot;: &quot;8&quot;,
+      &quot;fee_percent&quot;: &quot;5&quot;
+    }
+  ],
+  &quot;draft&quot;: [
+    {
+      &quot;record_id&quot;: &quot;row-1&quot;,
+      &quot;source_record&quot;: 2,
+      &quot;activity_id&quot;: &quot;AUTUMN-01&quot;,
+      &quot;product_id&quot;: &quot;MUG-01&quot;,
+      &quot;name&quot;: &quot;秋日马克杯 · 午间活动&quot;,
+      &quot;start_at&quot;: &quot;2026-10-01T10:00:00+08:00&quot;,
+      &quot;end_at&quot;: &quot;2026-10-01T11:30:00+08:00&quot;,
+      &quot;exclusive&quot;: &quot;true&quot;,
+      &quot;price&quot;: &quot;100&quot;,
+      &quot;discount&quot;: &quot;20&quot;,
+      &quot;cost&quot;: &quot;60&quot;,
+      &quot;fulfillment&quot;: &quot;10&quot;,
+      &quot;fee_percent&quot;: &quot;5&quot;
+    },
+    {
+      &quot;record_id&quot;: &quot;row-2&quot;,
+      &quot;source_record&quot;: 3,
+      &quot;activity_id&quot;: &quot;MEMBER-02&quot;,
+      &quot;product_id&quot;: &quot;MUG-01&quot;,
+      &quot;name&quot;: &quot;秋日马克杯 · 会员活动&quot;,
+      &quot;start_at&quot;: &quot;2026-10-01T11:30:00+08:00&quot;,
+      &quot;end_at&quot;: &quot;2026-10-01T13:00:00+08:00&quot;,
+      &quot;exclusive&quot;: &quot;false&quot;,
+      &quot;price&quot;: &quot;100&quot;,
+      &quot;discount&quot;: &quot;20&quot;,
+      &quot;cost&quot;: &quot;60&quot;,
+      &quot;fulfillment&quot;: &quot;10&quot;,
+      &quot;fee_percent&quot;: &quot;5&quot;
+    },
+    {
+      &quot;record_id&quot;: &quot;row-3&quot;,
+      &quot;source_record&quot;: 4,
+      &quot;activity_id&quot;: &quot;DESK-03&quot;,
+      &quot;product_id&quot;: &quot;MAT-02&quot;,
+      &quot;name&quot;: &quot;桌面软垫 · 常规活动&quot;,
+      &quot;start_at&quot;: &quot;2026-10-01T10:00:00+08:00&quot;,
+      &quot;end_at&quot;: &quot;2026-10-01T13:00:00+08:00&quot;,
+      &quot;exclusive&quot;: &quot;false&quot;,
+      &quot;price&quot;: &quot;80&quot;,
+      &quot;discount&quot;: &quot;10&quot;,
+      &quot;cost&quot;: &quot;40&quot;,
+      &quot;fulfillment&quot;: &quot;8&quot;,
+      &quot;fee_percent&quot;: &quot;5&quot;
+    }
+  ],
+  &quot;original_result&quot;: {
+    &quot;rule_version&quot;: &quot;promocheck-v2&quot;,
+    &quot;problems&quot;: [
+      {
+        &quot;id&quot;: &quot;R004:row-1|row-2:product_id|start_at|end_at|exclusive&quot;,
+        &quot;rule_id&quot;: &quot;R004&quot;,
+        &quot;severity&quot;: &quot;block&quot;,
+        &quot;record_ids&quot;: [
+          &quot;row-1&quot;,
+          &quot;row-2&quot;
+        ],
+        &quot;fields&quot;: [
+          &quot;product_id&quot;,
+          &quot;start_at&quot;,
+          &quot;end_at&quot;,
+          &quot;exclusive&quot;
+        ],
+        &quot;reason&quot;: &quot;overlap&quot;,
+        &quot;values&quot;: {
+          &quot;product_id&quot;: &quot;MUG-01&quot;,
+          &quot;overlap_start&quot;: &quot;2026-10-01T03:30:00.000Z&quot;,
+          &quot;overlap_end&quot;: &quot;2026-10-01T04:00:00.000Z&quot;,
+          &quot;minutes&quot;: 30
+        }
+      },
+      {
+        &quot;id&quot;: &quot;R006:row-1&quot;,
+        &quot;rule_id&quot;: &quot;R006&quot;,
+        &quot;severity&quot;: &quot;review&quot;,
+        &quot;record_ids&quot;: [
+          &quot;row-1&quot;
+        ],
+        &quot;fields&quot;: [
+          &quot;price&quot;,
+          &quot;discount&quot;,
+          &quot;cost&quot;,
+          &quot;fulfillment&quot;,
+          &quot;fee_percent&quot;
+        ],
+        &quot;reason&quot;: &quot;negativeContribution&quot;
+      }
+    ],
+    &quot;checked_records&quot;: 3,
+    &quot;contributions&quot;: [
+      {
+        &quot;record_id&quot;: &quot;row-1&quot;,
+        &quot;inputs&quot;: {
+          &quot;price&quot;: 10000,
+          &quot;discount&quot;: 3000,
+          &quot;cost&quot;: 6000,
+          &quot;fulfillment&quot;: 1000,
+          &quot;fee_percent&quot;: 500
+        },
+        &quot;errors&quot;: [],
+        &quot;net_cents&quot;: 7000,
+        &quot;fee_cents&quot;: 350,
+        &quot;contribution_cents&quot;: -350
+      },
+      {
+        &quot;record_id&quot;: &quot;row-2&quot;,
+        &quot;inputs&quot;: {
+          &quot;price&quot;: 10000,
+          &quot;discount&quot;: 2000,
+          &quot;cost&quot;: 6000,
+          &quot;fulfillment&quot;: 1000,
+          &quot;fee_percent&quot;: 500
+        },
+        &quot;errors&quot;: [],
+        &quot;net_cents&quot;: 8000,
+        &quot;fee_cents&quot;: 400,
+        &quot;contribution_cents&quot;: 600
+      },
+      {
+        &quot;record_id&quot;: &quot;row-3&quot;,
+        &quot;inputs&quot;: {
+          &quot;price&quot;: 8000,
+          &quot;discount&quot;: 1000,
+          &quot;cost&quot;: 4000,
+          &quot;fulfillment&quot;: 800,
+          &quot;fee_percent&quot;: 500
+        },
+        &quot;errors&quot;: [],
+        &quot;net_cents&quot;: 7000,
+        &quot;fee_cents&quot;: 350,
+        &quot;contribution_cents&quot;: 1850
+      }
+    ]
+  },
+  &quot;draft_result&quot;: {
+    &quot;rule_version&quot;: &quot;promocheck-v2&quot;,
+    &quot;problems&quot;: [],
+    &quot;checked_records&quot;: 3,
+    &quot;contributions&quot;: [
+      {
+        &quot;record_id&quot;: &quot;row-1&quot;,
+        &quot;inputs&quot;: {
+          &quot;price&quot;: 10000,
+          &quot;discount&quot;: 2000,
+          &quot;cost&quot;: 6000,
+          &quot;fulfillment&quot;: 1000,
+          &quot;fee_percent&quot;: 500
+        },
+        &quot;errors&quot;: [],
+        &quot;net_cents&quot;: 8000,
+        &quot;fee_cents&quot;: 400,
+        &quot;contribution_cents&quot;: 600
+      },
+      {
+        &quot;record_id&quot;: &quot;row-2&quot;,
+        &quot;inputs&quot;: {
+          &quot;price&quot;: 10000,
+          &quot;discount&quot;: 2000,
+          &quot;cost&quot;: 6000,
+          &quot;fulfillment&quot;: 1000,
+          &quot;fee_percent&quot;: 500
+        },
+        &quot;errors&quot;: [],
+        &quot;net_cents&quot;: 8000,
+        &quot;fee_cents&quot;: 400,
+        &quot;contribution_cents&quot;: 600
+      },
+      {
+        &quot;record_id&quot;: &quot;row-3&quot;,
+        &quot;inputs&quot;: {
+          &quot;price&quot;: 8000,
+          &quot;discount&quot;: 1000,
+          &quot;cost&quot;: 4000,
+          &quot;fulfillment&quot;: 800,
+          &quot;fee_percent&quot;: 500
+        },
+        &quot;errors&quot;: [],
+        &quot;net_cents&quot;: 7000,
+        &quot;fee_cents&quot;: 350,
+        &quot;contribution_cents&quot;: 1850
+      }
+    ]
+  },
+  &quot;changes&quot;: [
+    {
+      &quot;record_id&quot;: &quot;row-1&quot;,
+      &quot;field&quot;: &quot;end_at&quot;,
+      &quot;before&quot;: &quot;2026-10-01T12:00:00+08:00&quot;,
+      &quot;after&quot;: &quot;2026-10-01T11:30:00+08:00&quot;
+    },
+    {
+      &quot;record_id&quot;: &quot;row-1&quot;,
+      &quot;field&quot;: &quot;discount&quot;,
+      &quot;before&quot;: &quot;30&quot;,
+      &quot;after&quot;: &quot;20&quot;
+    }
+  ],
+  &quot;comparison&quot;: {
+    &quot;resolved&quot;: [
+      {
+        &quot;id&quot;: &quot;R004:row-1|row-2:product_id|start_at|end_at|exclusive&quot;,
+        &quot;rule_id&quot;: &quot;R004&quot;,
+        &quot;severity&quot;: &quot;block&quot;,
+        &quot;record_ids&quot;: [
+          &quot;row-1&quot;,
+          &quot;row-2&quot;
+        ],
+        &quot;fields&quot;: [
+          &quot;product_id&quot;,
+          &quot;start_at&quot;,
+          &quot;end_at&quot;,
+          &quot;exclusive&quot;
+        ],
+        &quot;reason&quot;: &quot;overlap&quot;,
+        &quot;values&quot;: {
+          &quot;product_id&quot;: &quot;MUG-01&quot;,
+          &quot;overlap_start&quot;: &quot;2026-10-01T03:30:00.000Z&quot;,
+          &quot;overlap_end&quot;: &quot;2026-10-01T04:00:00.000Z&quot;,
+          &quot;minutes&quot;: 30
+        }
+      },
+      {
+        &quot;id&quot;: &quot;R006:row-1&quot;,
+        &quot;rule_id&quot;: &quot;R006&quot;,
+        &quot;severity&quot;: &quot;review&quot;,
+        &quot;record_ids&quot;: [
+          &quot;row-1&quot;
+        ],
+        &quot;fields&quot;: [
+          &quot;price&quot;,
+          &quot;discount&quot;,
+          &quot;cost&quot;,
+          &quot;fulfillment&quot;,
+          &quot;fee_percent&quot;
+        ],
+        &quot;reason&quot;: &quot;negativeContribution&quot;
+      }
+    ],
+    &quot;remaining&quot;: [],
+    &quot;introduced&quot;: []
+  },
+  &quot;normalized_times&quot;: {
+    &quot;original&quot;: [
+      {
+        &quot;record_id&quot;: &quot;row-1&quot;,
+        &quot;start_ms&quot;: 1790820000000,
+        &quot;end_ms&quot;: 1790827200000
+      },
+      {
+        &quot;record_id&quot;: &quot;row-2&quot;,
+        &quot;start_ms&quot;: 1790825400000,
+        &quot;end_ms&quot;: 1790830800000
+      },
+      {
+        &quot;record_id&quot;: &quot;row-3&quot;,
+        &quot;start_ms&quot;: 1790820000000,
+        &quot;end_ms&quot;: 1790830800000
+      }
+    ],
+    &quot;draft&quot;: [
+      {
+        &quot;record_id&quot;: &quot;row-1&quot;,
+        &quot;start_ms&quot;: 1790820000000,
+        &quot;end_ms&quot;: 1790825400000
+      },
+      {
+        &quot;record_id&quot;: &quot;row-2&quot;,
+        &quot;start_ms&quot;: 1790825400000,
+        &quot;end_ms&quot;: 1790830800000
+      },
+      {
+        &quot;record_id&quot;: &quot;row-3&quot;,
+        &quot;start_ms&quot;: 1790820000000,
+        &quot;end_ms&quot;: 1790830800000
+      }
+    ]
+  },
+  &quot;assumptions&quot;: {
+    &quot;currency&quot;: &quot;CNY&quot;,
+    &quot;unit&quot;: &quot;one product / one unit&quot;,
+    &quot;fee_base&quot;: &quot;price minus merchant discount&quot;,
+    &quot;fee_rounding&quot;: &quot;half up to integer cents&quot;,
+    &quot;excluded&quot;: [
+      &quot;tax&quot;,
+      &quot;returns&quot;,
+      &quot;advertising&quot;,
+      &quot;fixed costs&quot;
+    ],
+    &quot;scope&quot;: &quot;Explicit operational constraints; independent row contribution; not platform approval, net profit, realized ROI or proof of authenticity.&quot;
+  },
+  &quot;review&quot;: null
+}</pre></details></body></html>

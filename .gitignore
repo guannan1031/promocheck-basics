@@ -4,3 +4,4 @@
 !.env.example
 node_modules/
 dist/
+/docs/evidence/clean-install-path.txt

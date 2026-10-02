@@ -6,3 +6,7 @@ Object.assign(messages.zh.reasons,{missingMoney:'缺少计算所需数据',inval
 Object.assign(messages.en.reasons,{missingMoney:'Required calculation input is missing',invalidMoney:'Use a nonnegative decimal, at most 2 decimal places',moneyRange:'Exceeds range (money ≤1000000, fee percent ≤100)',discountOverPrice:'Discount cannot exceed price',negativeContribution:'Negative unit contribution — review required'});
 messages.zh.phase='当前版本：配置检查、草案比较、单品贡献测算。复核报告待提供。';
 messages.en.phase='Current version: configuration checks, draft comparison and unit contribution. Review reports are pending.';
+messages.zh.phase='配置检查、单品贡献、修正对照与复核报告 · 合成演示不代表真实收益。';
+messages.en.phase='Configuration checks, unit contribution, comparison and review reports · Synthetic demonstrations are not realized gains.';
+messages.zh.clear='未发现已定义的检查问题';messages.zh.normal='无检查问题';
+messages.en.clear='No defined check issues found';messages.en.normal='No check issues';

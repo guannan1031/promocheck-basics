@@ -15,3 +15,9 @@ export function resetDraft(session) {
   return {...session,draft:session.original.map(r=>({...r})),revision:session.revision+1,draftResult:null,checkedRevision:null,review:null};
 }
 export function isCurrent(session) {return !!session?.draftResult && session.revision===session.checkedRevision;}
+export function reviewSession(session,name,note,at=new Date().toISOString()) {
+ if(!isCurrent(session))throw new Error('STALE_RESULTS');
+ name=name.trim();note=note.trim();
+ if(!name||name.length>80||!note||note.length>1000)throw new Error('INVALID_REVIEW');
+ return {...session,review:{name,note,at,revision:session.revision,self_declared:true}};
+}

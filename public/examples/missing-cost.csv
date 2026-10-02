@@ -1,0 +1,2 @@
+activity_id,product_id,name,start_at,end_at,exclusive,price,discount,cost,fulfillment,fee_percent
+MISSING-COST-01,MUG-01,合成样例 · 成本待补全,2026-10-01T10:00:00+08:00,2026-10-01T11:00:00+08:00,false,100,20,,10,5

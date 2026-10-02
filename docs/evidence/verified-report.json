@@ -1,0 +1,355 @@
+{
+  "schema_version": "promocheck-report-v1",
+  "language": "zh",
+  "generated_at": "2026-10-02T08:34:08.024Z",
+  "rule_version": "promocheck-v2",
+  "revision": 2,
+  "source": {
+    "name": "conflict.csv",
+    "synthetic": true
+  },
+  "input_fingerprint": {
+    "algorithm": "SHA-256",
+    "canonicalization": "UTF-8 JSON.stringify({original,draft}); array and property order preserved",
+    "value": "588abe217f221739ce318001dbcb75cdab70c322e7c5e5006eb2cc27cf6bdba2"
+  },
+  "original": [
+    {
+      "record_id": "row-1",
+      "source_record": 2,
+      "activity_id": "AUTUMN-01",
+      "product_id": "MUG-01",
+      "name": "秋日马克杯 · 午间活动",
+      "start_at": "2026-10-01T10:00:00+08:00",
+      "end_at": "2026-10-01T12:00:00+08:00",
+      "exclusive": "true",
+      "price": "100",
+      "discount": "30",
+      "cost": "60",
+      "fulfillment": "10",
+      "fee_percent": "5"
+    },
+    {
+      "record_id": "row-2",
+      "source_record": 3,
+      "activity_id": "MEMBER-02",
+      "product_id": "MUG-01",
+      "name": "秋日马克杯 · 会员活动",
+      "start_at": "2026-10-01T11:30:00+08:00",
+      "end_at": "2026-10-01T13:00:00+08:00",
+      "exclusive": "false",
+      "price": "100",
+      "discount": "20",
+      "cost": "60",
+      "fulfillment": "10",
+      "fee_percent": "5"
+    },
+    {
+      "record_id": "row-3",
+      "source_record": 4,
+      "activity_id": "DESK-03",
+      "product_id": "MAT-02",
+      "name": "桌面软垫 · 常规活动",
+      "start_at": "2026-10-01T10:00:00+08:00",
+      "end_at": "2026-10-01T13:00:00+08:00",
+      "exclusive": "false",
+      "price": "80",
+      "discount": "10",
+      "cost": "40",
+      "fulfillment": "8",
+      "fee_percent": "5"
+    }
+  ],
+  "draft": [
+    {
+      "record_id": "row-1",
+      "source_record": 2,
+      "activity_id": "AUTUMN-01",
+      "product_id": "MUG-01",
+      "name": "秋日马克杯 · 午间活动",
+      "start_at": "2026-10-01T10:00:00+08:00",
+      "end_at": "2026-10-01T11:30:00+08:00",
+      "exclusive": "true",
+      "price": "100",
+      "discount": "20",
+      "cost": "60",
+      "fulfillment": "10",
+      "fee_percent": "5"
+    },
+    {
+      "record_id": "row-2",
+      "source_record": 3,
+      "activity_id": "MEMBER-02",
+      "product_id": "MUG-01",
+      "name": "秋日马克杯 · 会员活动",
+      "start_at": "2026-10-01T11:30:00+08:00",
+      "end_at": "2026-10-01T13:00:00+08:00",
+      "exclusive": "false",
+      "price": "100",
+      "discount": "20",
+      "cost": "60",
+      "fulfillment": "10",
+      "fee_percent": "5"
+    },
+    {
+      "record_id": "row-3",
+      "source_record": 4,
+      "activity_id": "DESK-03",
+      "product_id": "MAT-02",
+      "name": "桌面软垫 · 常规活动",
+      "start_at": "2026-10-01T10:00:00+08:00",
+      "end_at": "2026-10-01T13:00:00+08:00",
+      "exclusive": "false",
+      "price": "80",
+      "discount": "10",
+      "cost": "40",
+      "fulfillment": "8",
+      "fee_percent": "5"
+    }
+  ],
+  "original_result": {
+    "rule_version": "promocheck-v2",
+    "problems": [
+      {
+        "id": "R004:row-1|row-2:product_id|start_at|end_at|exclusive",
+        "rule_id": "R004",
+        "severity": "block",
+        "record_ids": [
+          "row-1",
+          "row-2"
+        ],
+        "fields": [
+          "product_id",
+          "start_at",
+          "end_at",
+          "exclusive"
+        ],
+        "reason": "overlap",
+        "values": {
+          "product_id": "MUG-01",
+          "overlap_start": "2026-10-01T03:30:00.000Z",
+          "overlap_end": "2026-10-01T04:00:00.000Z",
+          "minutes": 30
+        }
+      },
+      {
+        "id": "R006:row-1",
+        "rule_id": "R006",
+        "severity": "review",
+        "record_ids": [
+          "row-1"
+        ],
+        "fields": [
+          "price",
+          "discount",
+          "cost",
+          "fulfillment",
+          "fee_percent"
+        ],
+        "reason": "negativeContribution"
+      }
+    ],
+    "checked_records": 3,
+    "contributions": [
+      {
+        "record_id": "row-1",
+        "inputs": {
+          "price": 10000,
+          "discount": 3000,
+          "cost": 6000,
+          "fulfillment": 1000,
+          "fee_percent": 500
+        },
+        "errors": [],
+        "net_cents": 7000,
+        "fee_cents": 350,
+        "contribution_cents": -350
+      },
+      {
+        "record_id": "row-2",
+        "inputs": {
+          "price": 10000,
+          "discount": 2000,
+          "cost": 6000,
+          "fulfillment": 1000,
+          "fee_percent": 500
+        },
+        "errors": [],
+        "net_cents": 8000,
+        "fee_cents": 400,
+        "contribution_cents": 600
+      },
+      {
+        "record_id": "row-3",
+        "inputs": {
+          "price": 8000,
+          "discount": 1000,
+          "cost": 4000,
+          "fulfillment": 800,
+          "fee_percent": 500
+        },
+        "errors": [],
+        "net_cents": 7000,
+        "fee_cents": 350,
+        "contribution_cents": 1850
+      }
+    ]
+  },
+  "draft_result": {
+    "rule_version": "promocheck-v2",
+    "problems": [],
+    "checked_records": 3,
+    "contributions": [
+      {
+        "record_id": "row-1",
+        "inputs": {
+          "price": 10000,
+          "discount": 2000,
+          "cost": 6000,
+          "fulfillment": 1000,
+          "fee_percent": 500
+        },
+        "errors": [],
+        "net_cents": 8000,
+        "fee_cents": 400,
+        "contribution_cents": 600
+      },
+      {
+        "record_id": "row-2",
+        "inputs": {
+          "price": 10000,
+          "discount": 2000,
+          "cost": 6000,
+          "fulfillment": 1000,
+          "fee_percent": 500
+        },
+        "errors": [],
+        "net_cents": 8000,
+        "fee_cents": 400,
+        "contribution_cents": 600
+      },
+      {
+        "record_id": "row-3",
+        "inputs": {
+          "price": 8000,
+          "discount": 1000,
+          "cost": 4000,
+          "fulfillment": 800,
+          "fee_percent": 500
+        },
+        "errors": [],
+        "net_cents": 7000,
+        "fee_cents": 350,
+        "contribution_cents": 1850
+      }
+    ]
+  },
+  "changes": [
+    {
+      "record_id": "row-1",
+      "field": "end_at",
+      "before": "2026-10-01T12:00:00+08:00",
+      "after": "2026-10-01T11:30:00+08:00"
+    },
+    {
+      "record_id": "row-1",
+      "field": "discount",
+      "before": "30",
+      "after": "20"
+    }
+  ],
+  "comparison": {
+    "resolved": [
+      {
+        "id": "R004:row-1|row-2:product_id|start_at|end_at|exclusive",
+        "rule_id": "R004",
+        "severity": "block",
+        "record_ids": [
+          "row-1",
+          "row-2"
+        ],
+        "fields": [
+          "product_id",
+          "start_at",
+          "end_at",
+          "exclusive"
+        ],
+        "reason": "overlap",
+        "values": {
+          "product_id": "MUG-01",
+          "overlap_start": "2026-10-01T03:30:00.000Z",
+          "overlap_end": "2026-10-01T04:00:00.000Z",
+          "minutes": 30
+        }
+      },
+      {
+        "id": "R006:row-1",
+        "rule_id": "R006",
+        "severity": "review",
+        "record_ids": [
+          "row-1"
+        ],
+        "fields": [
+          "price",
+          "discount",
+          "cost",
+          "fulfillment",
+          "fee_percent"
+        ],
+        "reason": "negativeContribution"
+      }
+    ],
+    "remaining": [],
+    "introduced": []
+  },
+  "normalized_times": {
+    "original": [
+      {
+        "record_id": "row-1",
+        "start_ms": 1790820000000,
+        "end_ms": 1790827200000
+      },
+      {
+        "record_id": "row-2",
+        "start_ms": 1790825400000,
+        "end_ms": 1790830800000
+      },
+      {
+        "record_id": "row-3",
+        "start_ms": 1790820000000,
+        "end_ms": 1790830800000
+      }
+    ],
+    "draft": [
+      {
+        "record_id": "row-1",
+        "start_ms": 1790820000000,
+        "end_ms": 1790825400000
+      },
+      {
+        "record_id": "row-2",
+        "start_ms": 1790825400000,
+        "end_ms": 1790830800000
+      },
+      {
+        "record_id": "row-3",
+        "start_ms": 1790820000000,
+        "end_ms": 1790830800000
+      }
+    ]
+  },
+  "assumptions": {
+    "currency": "CNY",
+    "unit": "one product / one unit",
+    "fee_base": "price minus merchant discount",
+    "fee_rounding": "half up to integer cents",
+    "excluded": [
+      "tax",
+      "returns",
+      "advertising",
+      "fixed costs"
+    ],
+    "scope": "Explicit operational constraints; independent row contribution; not platform approval, net profit, realized ROI or proof of authenticity."
+  },
+  "review": null
+}

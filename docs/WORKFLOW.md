@@ -38,3 +38,5 @@ User replied 好的继续 to the displayed product draft. Marked core PRD approv
 用户回复可以，spec/checklist标为approved；进入fast模式开发。CSV/规则/草案闭环实现，9项测试及构建通过，浏览器验证见QA-SLICE1.md。第一片用户试用反馈待收集；不进入第二片，也不把官方课程标为完成。
 
 2026-10-02第二片：14项测试与构建通过。实际浏览器优惠30→20显示-3.50→6.00/差额9.50；清空成本显示无法计算且差额为—。开始第三片。首个本地提交作者标识为Codex <codex@localhost>，不使用推测的用户身份，不改全局Git配置。
+
+2026-10-02第三片：复核绑定修订、HTML/JSON同快照与SHA256、恶意文本转义、本地启动脚本完成。18测试/构建与独立目录ci/test/build通过；实际下载并重新打开合成报告通过。用户最终试用、学习回顾与app-map尚未完成，不进入6-ship。
