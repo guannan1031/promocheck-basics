@@ -1,0 +1,37 @@
+{
+  "date": "2026-09-29",
+  "checks": [
+    {
+      "check": "official_skill_files_sha256",
+      "result": "PASS",
+      "count": 14
+    },
+    {
+      "check": "source_archive_hash_and_crc",
+      "result": "PASS"
+    },
+    {
+      "check": "honest_workflow_status",
+      "result": "PASS",
+      "stage": "scope draft"
+    },
+    {
+      "check": "profile_and_credentials_ignored",
+      "result": "PASS"
+    },
+    {
+      "check": "fourth_event_handoff_target",
+      "result": "PASS"
+    }
+  ],
+  "app_tests": "NOT_RUN_NO_APPLICATION",
+  "npm_metadata_probe": {
+    "result": "FAIL",
+    "code": "ENOTFOUND",
+    "host": "registry.npmmirror.com",
+    "global_config_changed": false
+  },
+  "node": "v24.12.0",
+  "npm": "11.6.2",
+  "git": "initialized locally; no commit; no remote publication"
+}

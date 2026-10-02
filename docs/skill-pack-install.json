@@ -1,0 +1,66 @@
+{
+  "source": "https://github.com/challengepost/learn-ai-basics",
+  "commit": "6984209dd33f12ab8781d8caf0c16a5de2343657",
+  "installed_at": "2026-09-29T10:03:56.772206+00:00",
+  "method": "project-local exact copy from verified official git checkout",
+  "destination": ".agents/skills",
+  "global_changes": false,
+  "files": [
+    {
+      "path": "1-start/SKILL.md",
+      "sha256": "8f584db76d1f8b51605c92ef4d7972bcbd0c581a6264537f184d24b45b586b03"
+    },
+    {
+      "path": "1-start/templates/learner-profile-template.md",
+      "sha256": "2db105709ad1735ff9a2f4007c5f15223778bcbc2de970e1d64d6e0af2e5a16e"
+    },
+    {
+      "path": "2-scope/SKILL.md",
+      "sha256": "9aa53326582de049ebd9cd24f1f01290f8f67c38cefe1a0b59241604e5497b49"
+    },
+    {
+      "path": "2-scope/templates/scope-template.md",
+      "sha256": "38cd48e72000a2f6640a65cf7e2d1d322906136bf1b7b8a9a44e0931fde4c145"
+    },
+    {
+      "path": "3-prd/references/prd-guide.md",
+      "sha256": "0b834eb3393ab081ced8a2404e1731b4c9ee07f19b057170ffeae02892550b34"
+    },
+    {
+      "path": "3-prd/SKILL.md",
+      "sha256": "0c55353e4b8fa16351e0b702f2f24e371d59060d66d91c5553fde8f1ca20b8b6"
+    },
+    {
+      "path": "3-prd/templates/prd-template.md",
+      "sha256": "888cfcffe4464a22eb961f76dff55ed9bacb5684a91cd73786f4c7bdac29075a"
+    },
+    {
+      "path": "4-spec/references/spec-patterns.md",
+      "sha256": "ef5333bdab411912ea34ded5fd1ffc60ab5787101870cba545902d1aa1e25c77"
+    },
+    {
+      "path": "4-spec/SKILL.md",
+      "sha256": "90cd851f677b9b34ae0ec9a09813a286be4ed6a1db483ebb82ecb774a3e0e1d6"
+    },
+    {
+      "path": "4-spec/templates/spec-template.md",
+      "sha256": "ca1ece5d705bc6fd5d6074f02cb242b1251bdc57bdc99bdab16a7c54b1a88498"
+    },
+    {
+      "path": "5-build/references/code-tour.md",
+      "sha256": "27f04584d8cf04365064b7e342e4e1d2943e2887093194d98dde7dc80c8c1946"
+    },
+    {
+      "path": "5-build/SKILL.md",
+      "sha256": "cdbcf7cbe39334ddbea96e6171222fa7c284a180c562f87f01c8b359ba26743a"
+    },
+    {
+      "path": "5-build/templates/checklist-template.md",
+      "sha256": "6d14cd3b30c209b8f656f6cfa7742e5d8e53e9760c5cad991d299a3aa66facd3"
+    },
+    {
+      "path": "6-ship/SKILL.md",
+      "sha256": "ca2c76ae2f7ab6860c82d5f7253151286cc1e337c16dfbd9c1b7445ee0b6b551"
+    }
+  ]
+}

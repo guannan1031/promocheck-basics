@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-30",
+  "scope_status": "approved",
+  "prd_status": "draft",
+  "spec_exists": false,
+  "example_arithmetic": {
+    "before": "-3.50",
+    "after": "6.00",
+    "difference": "9.50",
+    "check": "PASS"
+  },
+  "application_tests": "NOT_RUN",
+  "real_user_case": "USER_CONFIRMED_NONE"
+}

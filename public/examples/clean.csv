@@ -1,0 +1,3 @@
+activity_id,product_id,name,start_at,end_at,exclusive,price,discount,cost,fulfillment,fee_percent
+EARLY-01,MUG-01,合成样例 · 上午,2026-10-01T10:00:00+08:00,2026-10-01T11:30:00+08:00,true,100,20,60,10,5
+LATE-02,MUG-01,合成样例 · 下午,2026-10-01T11:30:00+08:00,2026-10-01T13:00:00+08:00,false,100,20,60,10,5

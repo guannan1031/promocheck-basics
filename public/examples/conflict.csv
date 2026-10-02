@@ -1,0 +1,4 @@
+activity_id,product_id,name,start_at,end_at,exclusive,price,discount,cost,fulfillment,fee_percent
+AUTUMN-01,MUG-01,秋日马克杯 · 午间活动,2026-10-01T10:00:00+08:00,2026-10-01T12:00:00+08:00,true,100,30,60,10,5
+MEMBER-02,MUG-01,秋日马克杯 · 会员活动,2026-10-01T11:30:00+08:00,2026-10-01T13:00:00+08:00,false,100,20,60,10,5
+DESK-03,MAT-02,桌面软垫 · 常规活动,2026-10-01T10:00:00+08:00,2026-10-01T13:00:00+08:00,false,80,10,40,8,5
