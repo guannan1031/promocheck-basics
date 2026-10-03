@@ -152,3 +152,7 @@ schemaVersion=1的合成计划：单SKU实物库存、已占用、安全预留�
 src/core/advice.mjs在evaluatePlan同一约束下尝试不参加、单场A/B、A优先/B优先顺序；每次分配受所有后续活动日期容量约束，避免未来补货提前支用。单位贡献不为正的候选不额外分配；用原规则复核、去重、按贡献和投入排序，最多三个，不称最优解。应用只改custom，保存一次before/after及贡献，下一次普通编辑清除撤回记录。
 
 assessRisk按原参加活动保留fixed投入，销量按100/80/50/0%向下取整；不将0销量等同没有参加。正单位贡献下单场回本为ceil(fixed/unit)，非正不声称可靠销量回本。DecisionSupport.jsx使用相同结果；report绑定revision与selected，输入变化重建组件并隐藏旧报告，TXT只读快照，无HTML执行。生成前再次校验可行性。财务单位成本仍需人工提供与核对。
+
+
+## Public repository — 2026-10-03
+https://github.com/guannan1031/promocheck-basics ，master分支；已匿名核验README和必需规划文件。视频托管链接与Devpost提交回执仍待，详见docs/DELIVERY_STATUS.md。

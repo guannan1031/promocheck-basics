@@ -90,3 +90,7 @@ Paired Chinese charts consume the same evaluator. Both share a maximum absolute 
 ## English Delivery Revision
 
 `src/Judge.jsx` at `?view=judge` reuses `evaluatePlan`, `suggestAllocations` and `assessRisk`; `plannerEnglish.mjs` translates validation/ledger messages without changing calculations. It provides editable inputs, five candidates, suggestions/undo, ledger, risk, English TXT and JSON replay. It is a focused separate session, not every Chinese chart translated or a state-preserving language toggle. Input/candidate changes clear old report state. `../docs/TECHNICAL_GUIDE.en.md` provides full current run/behavior instructions, while `../docs/DELIVERY_STATUS.md` records actual publication/submission status.
+
+
+## Public Repository — October 3, 2026
+https://github.com/guannan1031/promocheck-basics , branch `master`. README and required planning documents verified anonymously. Video hosting and Devpost submission receipt remain pending; see `../docs/DELIVERY_STATUS.md`.

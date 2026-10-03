@@ -14,8 +14,8 @@ Competition: Build With AI: Basics, https://learn-ai-basics.devpost.com/ .
 
 - **Devpost authentication:** Chrome currently shows login, with no authenticated entry form or registration/submission receipt observed. Participant must log in; do not send credentials in chat.
 - **Final participant review:** implementation verified by developer; no invented final hands-on feedback or personal learning answer. The video/app are available for review.
-- **Public repository:** proposed account/name `guannan1031/promocheck-basics`; account connector verified. No repository created or pushed yet; no public URL claimed. Publishing exposes included source and history. Explicit authorization required by the installed shipping workflow.
-- **Video hosting:** local MP4 ready, but no publicly accessible YouTube/Vimeo URL yet.
+- **Public repository: DONE.** https://github.com/guannan1031/promocheck-basics — created public and pushed complete project history to `master` after the user confirmed continuing publication. Anonymous reads of README, scope, PRD, spec and Judge.jsx returned HTTP 200 and matched local source. Original publication commit: `1455bfc`. Actual learner profile/environment files remain excluded.
+- **Video hosting:** local MP4 ready; YouTube Studio is logged into channel `guanguan li` and its upload dialog is open. The dialog explicitly makes upload acceptance of YouTube Terms of Service and Community Guidelines. Awaiting action-time participant confirmation (or participant upload); no file uploaded and no public video URL yet.
 - **Participant-written entry:** exact required fields and exit-survey prompts must be read from the authenticated form. Name carried forward as PromoCheck. The participant supplies their description/reflection; the installed workflow allows spelling/grammar help, not agent-authored public answers.
 - **Submit and verify receipt:** not done. Do not mark complete from a prepared ZIP, a video file or a saved draft.
 
@@ -24,3 +24,9 @@ Competition: Build With AI: Basics, https://learn-ai-basics.devpost.com/ .
 All examples and value differences are synthetic assumptions. No real merchant acceptance, platform execution, actual ROI improvement or award/payment evidence. Technical completion is not the same milestone as submission or winning.
 
 The official homepage was checked in Chrome on October 3 and still showed October 27, 05:00 GMT+8 as deadline. Formal eligibility/terms must be reviewed by the participant when submitting. The legal rules page and live submission form take precedence over old local notes and skill workflow guidance.
+
+## Publication account resolution
+
+Chrome was signed in as a different account, `guannan1031-hash`. No repository was created there. The existing Git Credential Manager account was verified directly against GitHub as `guannan1031`, matching the approved destination; the temporary account-choice question was withdrawn. Authentication was used only in memory and was not printed or written into project files. The repository was created through GitHub REST and pushed using Git/GCM. No new credentials, browser account switching or force push.
+
+Devpost automation encountered unattached/time-out errors on the login/submission tabs. No authenticated form, registration receipt or completed submission has been observed. This is separate from successful GitHub publication.
