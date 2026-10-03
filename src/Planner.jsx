@@ -23,7 +23,7 @@ export default function Planner(){
  }
  function restore(text){try{update(restorePlan(text));setBuffer(text);setSelected('custom');setNotice('计划已恢复，所有结果已按输入重新计算。');}catch(e){setNotice(`恢复失败，当前计划保留：${e.message}`);}}
  return <div className="planner">
-  <header className="plan-top"><a className="plan-brand" href="/">PromoCheck <span>大促经营规划</span></a><a href="?view=check">原促销检查工具 ↗</a></header>
+  <header className="plan-top"><a className="plan-brand" href="/">PromoCheck <span>大促经营规划</span></a><a href="?view=judge">English demo ↗</a><a href="?view=check">原促销检查工具 ↗</a></header>
   <main className="plan-main">
    <div className="plan-heading"><div><p className="plan-eyebrow">活动前 · 方案会审</p><h1>有限的库存和预算，怎么安排活动？</h1><p>改动假设，比较活动组合；先确认能执行，再讨论赚多少。</p></div><span className="plan-badge">合成演示 · 修订 {revision}</span></div>
    <div className="plan-notice"><strong>这是模型演示，未接入真实店铺。</strong> 单SKU、两场活动、人民币。销量由你假设，不是预测；结果不代表实际收益。修改即时重算，页面关闭后不自动保存。</div>

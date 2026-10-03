@@ -3,6 +3,8 @@ doc: spec
 status: approved
 ---
 
+[English counterpart](spec.en.md)
+
 # PromoCheck — Technical Spec
 
 2026-09-30编写；2026-10-01用户回复“可以”，确认已展示的技术方案及构建顺序，开始实现。

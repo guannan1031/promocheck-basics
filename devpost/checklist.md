@@ -68,9 +68,9 @@ Build mode: fast（已随构建顺序确认；自动验证各片，保留首片�
 - [ ] Final review complete — feedback resolved and learner confirms ready to ship
 
 ## Code Tour and App Map
-- [ ] Learning activity complete — 用一项实际修正说明输入、规则、报告如何对应。
-- [ ] Optional edit and transfer reflection addressed
-- [ ] `devpost/app-map.html` generated from finished code, checked, and shown
+- [x] Learning activity complete — 2026-10-03简短证据回顾：将ROI目标落实为缺货阻断与固定费风险，已解释输入→规则→报告的对应；不是用户亲自代码操作。
+- [x] Optional edit and transfer reflection addressed — 不新增练习；用户此前已认同有依据的问题、修复过程和可复现体验，不代写个人学习感言。
+- [x] `devpost/app-map.html` generated from finished code, checked, and shown — 2026-10-03生成并检查，已打开。
 
 Activity and evidence: 三片实现已通过机械验证；docs/QA.md记录证据，用户学习回顾待进行。
 Route and stops: 完成实现后填写实际文件与函数。
@@ -106,3 +106,7 @@ Activity mode: 待实际试用。
 2026-10-02图文反馈：用户希望用两个方案对比等图文表达。已实现双方案可选卡片、共用刻度正负贡献图、活动时间轴、差额解释与可展开全量表；保留库存账。浏览器切换/亏损/缺值/窄屏验证完成，详见docs/QA-PLANNER.md；未代填用户满意或最终ready-to-ship确认。
 
 2026-10-03用户确认继续优化决策链路，新增第5片；36项测试与浏览器建议/撤回/风险/实际TXT下载通过，详见docs/QA-ADVICE.md。代码检查点后勾选实现；用户最终反馈和学习回顾未代填，无参赛投稿。
+
+
+### 2026-10-03 参赛交付收尾
+英文独立工作台?view=judge复用同一计算，39测试/生产构建/实际下载与缺值失效通过。90秒真实界面帧序列演示已生成，无配音；scope/prd/spec英文对应、技术指南与代码地图已补。参考路线为Judge.apply→planner.evaluatePlan/advice.assessRisk→Judge.createReport；这是事实回顾，不声称用户完成亲手操作。最终用户试用、公开授权、登录及本人提交文案未代勾，见docs/DELIVERY_STATUS.md。

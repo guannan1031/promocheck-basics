@@ -1,0 +1,60 @@
+﻿PromoCheck decision record — SYNTHETIC / PENDING HUMAN REVIEW
+Created: 2026-10-03T08:27:12.030Z | Revision: 1
+Plan: Custom allocation | A 0 / B 160 units
+Fixed spend: CN¥800.00 | Assumed campaign contribution: CN¥640.00
+Contribution = allocated units × unit contribution − participating activities’ fixed spend.
+Allocation changed: 100/100 → 0/160 | Contribution: CN¥100.00 → CN¥640.00. Hypothetical difference, not realized revenue.
+Unit contribution and demand are manual, unverified assumptions. Variable costs must already be deducted; fixed spend is deducted separately.
+DATES: Beijing calendar days, end inclusive; stock reserved once at each activity start. Confirmed inbound is available at start of arrival day.
+INPUTS (complete; derived values are not trusted on restore):
+{
+  "schemaVersion": 1,
+  "dataMode": "synthetic",
+  "stock": "300",
+  "occupied": "50",
+  "safety": "30",
+  "baseline": "20",
+  "budget": "1400",
+  "exclusive": false,
+  "inbound": {
+    "quantity": "0",
+    "date": "2026-11-01",
+    "confirmed": false
+  },
+  "events": [
+    {
+      "id": "A",
+      "start": "2026-11-01",
+      "end": "2026-11-03",
+      "unit": "6",
+      "fixed": "600",
+      "demand": "180"
+    },
+    {
+      "id": "B",
+      "start": "2026-11-10",
+      "end": "2026-11-11",
+      "unit": "9",
+      "fixed": "800",
+      "demand": "160"
+    }
+  ],
+  "custom": [
+    "0",
+    "160"
+  ]
+}
+STOCK LEDGER:
+Opening | Physical stock − occupied − safety − ordinary sales reserve | change 200 | balance 200
+2026-11-10 | B starts: reserve 160 units; sales through 2026-11-11 | change -160 | balance 40
+BREAK-EVEN:
+A: not participating
+B: 89 units; planned 160
+DOWNSIDE (original fixed spend retained):
+100% sales | A/B 0/160 | contribution CN¥640.00
+80% sales | A/B 0/128 | contribution CN¥352.00
+50% sales | A/B 0/80 | contribution -CN¥80.00
+0% sales | A/B 0/0 | contribution -CN¥800.00
+Review pending: operations (demand substitution/rules), warehouse (stock/inbound), finance (costs, refunds, subsidies and taxes).
+Single SKU, two activities. Excludes company overhead, unconfirmed settlement costs, displaced ordinary-sales profit and extra storage losses. Not net profit, ad ROAS or realized ROI. No merchant validation or platform execution.
+Independent snapshot; regenerate after editing. Save plan JSON for replay.

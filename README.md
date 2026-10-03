@@ -1,4 +1,14 @@
-# PromoCheck — 本地促销上线前检查
+# PromoCheck — Campaign decisions / 大促方案会审
+
+## Current delivery / 当前交付（2026-10-03）
+
+English workflow: `http://127.0.0.1:5193/?view=judge`. Compare one SKU across two campaigns with shared inventory, dated inbound, fixed budget, reversible allocation suggestions, downside tests and decision records. All built-in inputs are synthetic; no realized ROI or merchant validation is claimed.
+
+中文主界面：`http://127.0.0.1:5193/`。英文演示为同一计算模型的独立页面；跨页面切换不迁移未保存输入，请先保存计划JSON。原CSV检查流程仍在 `/?view=check`，支持EN切换。
+
+[English technical guide](docs/TECHNICAL_GUIDE.en.md) · [Code map / 代码地图](devpost/app-map.html) · [Delivery status](docs/DELIVERY_STATUS.md) · [License](LICENSE)
+
+下文保留历次功能记录；旧段落里的阶段状态以当前交付记录为准。公开仓库、视频上传与正式提交以可核验链接/回执为准。
 
 浏览器内完成 CSV 导入→配置检查→单品贡献测算→草案修正→复查→复核报告。内置案例均为合成；无真实商家收益或平台结算验证。
 

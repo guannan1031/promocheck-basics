@@ -3,6 +3,8 @@ doc: prd
 status: approved
 ---
 
+[English counterpart](prd.en.md)
+
 # PromoCheck — Product Requirements
 
 促销上线前检查与修正对比工具，面向需要复核活动配置的小型电商运营人员。

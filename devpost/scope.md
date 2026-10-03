@@ -3,6 +3,8 @@ doc: scope
 status: approved
 ---
 
+[English counterpart](scope.en.md)
+
 # PromoCheck
 
 A local promotion preflight workbench: inspect configuration risks, compare unit contribution assumptions, and preserve review evidence.
