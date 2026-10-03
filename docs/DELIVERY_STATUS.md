@@ -7,7 +7,7 @@ Competition: Build With AI: Basics, https://learn-ai-basics.devpost.com/ .
 - Chinese planner, original bilingual CSV preflight, and English campaign workflow (`?view=judge`).
 - Shared inventory / dated inbound / budget / explicit exclusion / contributions, allocation apply/undo, break-even and downside, TXT evidence and JSON replay.
 - Scope, PRD and spec with English counterparts; English technical guide; offline code map; third-party disclosure; MIT license for original application work. Third-party materials retain their own terms.
-- 39 automated tests passed; browser workflows/download/missing-data checks; production build. Details: `QA-ENGLISH-DELIVERY.md`.
+- 39 automated tests passed; browser workflows/download/missing-data checks; production build. Independent source-ZIP extraction, fresh npm install, all 39 tests and build also passed. Details: `QA-ENGLISH-DELIVERY.md`.
 - Local 90-second English UI walkthrough at `deliverables/promocheck-english-demo.mp4` (ignored in Git; intended for a public video host).
 
 ## Still required for actual submission

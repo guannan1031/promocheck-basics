@@ -25,3 +25,7 @@ Video is local only until a public video-host URL is verified. Raw frames and lo
 All 127 historical Git blobs were checked for private-key headers, GitHub/OpenAI token patterns and long credential assignments: no matches. No real `devpost/learner-profile.md` or `.env` paths appear in history. Tracked-path review showed project-only files. Pattern scanning cannot guarantee absence of all sensitive information; final intended additions are inspected separately. No history rewrite or forced push.
 
 Source/license, dependency lockfile, planning history and English counterparts are intended to be public. Personal learner profile, environment files, dependencies, build output, raw video frames and login screenshot are excluded. Repository-publication authorization and Devpost authentication remain separate from local verification.
+
+## Independent package check
+
+Source ZIP exported from commit `4db3986`, extracted into an empty `deliverables/clean-check` directory. Fresh `npm ci --registry=https://registry.npmjs.org` installed 19 packages; npm reported zero vulnerabilities. `npm test` passed 39/39 and `npm run build` passed there. No original node_modules was copied. Source ZIP excludes the actual learner profile, environment files, node_modules and deliverables. Subsequent changes record verification only; runtime source remains identical.
