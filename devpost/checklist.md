@@ -50,6 +50,16 @@ Build mode: fast（已随构建顺序确认；自动验证各片，保留首片�
   Learner check: 将B销量改为80，查看亏损；为全部参加补140件，再将到货移到活动之后，查看库存阻断。
   Commit: `Add campaign allocation planning with stock and budget constraints`
 
+- [ ] **5. 可执行调整、销量风险与决策单**
+  Becomes usable: 应用/撤回分配建议，查看回本边界和销量下降的亏损，保存含假设的决策单。
+  Why now: 用户确认提升决策价值，而非仅增加图表。
+  PRD ref: `prd.md > Allocation advice and downside risk`
+  Spec ref: `spec.md > Allocation advice and downside risk`
+  Build: advice纯计算、DecisionSupport界面、绑定修订的TXT快照与复制备用。
+  Verify (mechanical): 建议约束/未来补货/预算/互斥/零销量固定费/报告测试；浏览器应用撤回、实际下载、过期隐藏及窄屏。
+  Learner check: 应用B160建议，查看89件回本、50%销量亏80元，生成决策单，再撤回分配。
+  Commit: `Add actionable allocation advice and downside decision records`
+
 ## Hands-on Checkpoints
 - [x] Early usable behavior explored — 第一片后反馈操作与布局。
 - [ ] Final kick-the-tires exploration and feedback completed
@@ -94,3 +104,5 @@ Activity mode: 待实际试用。
 2026-10-02用户阅读新方案后要求继续，新增第4片，不把商业验证门槛当作已通过。采用单SKU两活动合成模型验证，规模小于规划中的50SKU商业MVP。27项测试、构建、浏览器修改/下载/实际文件恢复通过，证据docs/QA-PLANNER.md；新片用户试用未完成。库存和候选比较已实现，真实映射和实际复盘仍未实现。
 
 2026-10-02图文反馈：用户希望用两个方案对比等图文表达。已实现双方案可选卡片、共用刻度正负贡献图、活动时间轴、差额解释与可展开全量表；保留库存账。浏览器切换/亏损/缺值/窄屏验证完成，详见docs/QA-PLANNER.md；未代填用户满意或最终ready-to-ship确认。
+
+2026-10-03用户确认继续优化决策链路，新增第5片；36项测试与浏览器建议/撤回/风险/实际TXT下载通过，详见docs/QA-ADVICE.md。代码检查点后勾选实现；用户最终反馈和学习回顾未代填，无参赛投稿。

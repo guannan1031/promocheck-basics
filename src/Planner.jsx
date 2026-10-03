@@ -2,13 +2,16 @@ import React,{useEffect,useState} from 'react';
 import {examplePlan,evaluatePlan,restorePlan} from './core/planner.mjs';
 import './planner.css';
 import PlanComparison from './PlanComparison.jsx';
+import DecisionSupport from './DecisionSupport.jsx';
 
 const money=v=>v===null?'不可计算':new Intl.NumberFormat('zh-CN',{style:'currency',currency:'CNY'}).format(v/100);
 function Field({label,value,onChange,type='text'}){return <label className="plan-field"><span>{label}</span><input type={type} inputMode={type==='text'?'decimal':undefined} value={value} onChange={e=>onChange(e.target.value)}/></label>;}
 export default function Planner(){
  const [plan,setPlan]=useState(examplePlan),[selected,setSelected]=useState('all'),[revision,setRevision]=useState(0),[buffer,setBuffer]=useState(''),[notice,setNotice]=useState('');
  const result=evaluatePlan(plan),detail=result.plans.find(p=>p.id===selected),best=result.plans.find(p=>p.id===result.best);
- const update=next=>{setPlan(next);setRevision(r=>r+1);setNotice('');};
+ const [allocationUndo,setAllocationUndo]=useState(null);
+ const update=next=>{setPlan(next);setRevision(r=>r+1);setNotice('');setAllocationUndo(null);};
+ const applyAllocation=qty=>{const before=[...plan.custom],next={...plan,custom:qty.map(String)},beforeContribution=result.plans.find(s=>s.id==='custom').contribution,afterContribution=evaluatePlan(next).plans.find(s=>s.id==='custom').contribution;update(next);setAllocationUndo({before,after:qty.map(String),beforeContribution,afterContribution});setSelected('custom');};
  const field=(key,value)=>update({...plan,[key]:value});
  const event=(i,key,value)=>update({...plan,events:plan.events.map((e,j)=>j===i?{...e,[key]:value}:e)});
  useEffect(()=>{document.title='PromoCheck — 大促方案比较';document.documentElement.lang='zh-CN';},[]);
@@ -37,6 +40,8 @@ export default function Planner(){
     {result.errors.length>0?<div role="alert" className="plan-errors"><strong>先补齐输入，暂不显示方案结论</strong><ul>{result.errors.map((e,i)=><li key={i}>{e}</li>)}</ul></div>:<>
      <div className="plan-summary" aria-live="polite"><strong>期初活动可用 {result.initial} 件</strong><span>{best?`当前候选中贡献最高：${result.ties.join(' / ')}，${money(best.contribution)}`:'没有可行方案，请先处理资源缺口。'}</span><small>含“不参加”基准；仅比较下表候选，不是全局最优，也未衡量自然销售被挤占的利润。</small></div>
      <PlanComparison plan={plan} result={result} onInspect={id=>{setSelected(id);requestAnimationFrame(()=>document.getElementById('plan-ledger')?.scrollIntoView({block:'start'}));}}/>
+     {allocationUndo&&<div className="plan-summary"><strong>已调整自定义分配：A/B {allocationUndo.before.join(' / ')} → {allocationUndo.after.join(' / ')} 件</strong><span>预计活动贡献：{allocationUndo.beforeContribution===null?'原方案不可行':money(allocationUndo.beforeContribution)} → {money(allocationUndo.afterContribution)}。这是同一组假设下的比较，不是已实现增收。</span><span>只改分配，未增加库存、预算或需求。下一次编辑会结束本次撤回记录。</span><button className="plan-button" onClick={()=>update({...plan,custom:allocationUndo.before})}>撤回本次分配建议</button></div>}
+     <DecisionSupport key={revision} plan={plan} result={result} selected={selected} onSelect={setSelected} onApply={applyAllocation} revision={revision} adjustment={allocationUndo}/>
      <details className="all-plan-details"><summary>展开全部候选方案的数据表</summary><div className="plan-scroll"><table className="plan-table"><thead><tr><th>方案 / 库存分配</th><th>专项投入</th><th>可执行性</th><th>预计活动贡献</th><th>贡献 ÷ 投入</th><th>查看</th></tr></thead><tbody>{result.plans.map(s=><tr key={s.id} className={selected===s.id?'plan-selected':''}><th scope="row">{s.name}<small>A {s.qty[0]} / B {s.qty[1]} 件</small></th><td>{money(s.investment)}</td><td className={s.feasible?'plan-ok':'plan-bad'}>{s.feasible?'可行':'不可行'}</td><td>{s.contribution===null?'—（约束未满足）':money(s.contribution)}</td><td>{s.returnRate===null?'—':`${(s.returnRate*100).toFixed(1)}%`}</td><td><button className="plan-button" onClick={()=>setSelected(s.id)} aria-pressed={selected===s.id}>查看{s.name}</button></td></tr>)}</tbody></table></div></details>
      <p className="plan-footnote">贡献＝A销量×A每件贡献＋B销量×B每件贡献−已参加活动的固定投入。不是净利润，不是广告ROAS；专项投入为0时回报率无定义。不参加记0，仅作为活动账基准。</p>
      {detail&&<div className="plan-detail" id="plan-ledger"><h3>{detail.name} · 决策依据</h3>{detail.reasons.length>0?<div className="plan-errors"><ul>{detail.reasons.map((r,i)=><li key={i}>{r}</li>)}</ul><p>忽略约束的条件算术值：{money(detail.conditional)}。此数值不能视为可实现收益。</p></div>:<p>在当前假设下可执行，预计活动贡献 <strong>{money(detail.contribution)}</strong>。{detail.contribution<0?'该方案预计亏损。':'仍须由运营和财务确认假设。'}</p>}

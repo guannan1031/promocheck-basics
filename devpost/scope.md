@@ -55,3 +55,7 @@ A local promotion preflight workbench: inspect configuration risks, compare unit
 用户在阅读国内店铺商业研究和开发方案后要求“那你继续”，授权推进新方向；不是商家验证通过。追加一个合成可操作切片作为模型验证，既有v0.1保留。
 
 Unique kernel now includes comparing event allocations against shared stock, dated confirmed inbound, explicit budget and contribution assumptions. First slice is intentionally one SKU / two events / one stock pool, not the proposed full 50-SKU MVP. No native platform rules, automatic execution, real demand forecast or observed ROI. User can edit assumptions, compare candidate plans and restore an exported scenario. Existing preflight remains available.
+
+## Allocation advice and downside risk
+
+2026-10-03用户同意继续优化“发现问题→给出调整→比较风险→形成决策”。在既有单SKU两活动范围内追加：单场/两种库存分配次序候选，应用到自定义方案并可单次撤回；单场回本边界、固定投入不退还的销量压力测试；可下载/复制的待复核决策单。非全局最优，无真实需求预测、自动执行或收益承诺。输入来源仍为手工假设，真实依据待商家核验。
