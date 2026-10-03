@@ -50,7 +50,7 @@ Build mode: fast（已随构建顺序确认；自动验证各片，保留首片�
   Learner check: 将B销量改为80，查看亏损；为全部参加补140件，再将到货移到活动之后，查看库存阻断。
   Commit: `Add campaign allocation planning with stock and budget constraints`
 
-- [ ] **5. 可执行调整、销量风险与决策单**
+- [x] **5. 可执行调整、销量风险与决策单**
   Becomes usable: 应用/撤回分配建议，查看回本边界和销量下降的亏损，保存含假设的决策单。
   Why now: 用户确认提升决策价值，而非仅增加图表。
   PRD ref: `prd.md > Allocation advice and downside risk`
