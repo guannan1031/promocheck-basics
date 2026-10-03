@@ -74,3 +74,7 @@ English: Browser-local promotion preflight with explicit configuration rules, in
 新增可行库存分配建议及应用/撤回、调整前后贡献、回本销量和100/80/50/0%销量压力测试。已参加活动的固定投入始终保留；零销量和不参加明确区分。可生成TXT决策单，保存依据、时序库存账、风险和本轮变化；修改或切换方案后隐藏旧报告入口。
 
 36项测试、构建和浏览器闭环验证见docs/QA-ADVICE.md。建议仍是有限候选搜索，未增加真实销量预测或平台执行；成本与需求来源仍待商家确认。
+
+## 2026-10-03 公开演示视频
+
+[观看90秒英文界面演示](https://youtu.be/NswEma0t0XA)。视频已公开；Devpost正式提交及回执尚未完成，见[交付状态](docs/DELIVERY_STATUS.md)。

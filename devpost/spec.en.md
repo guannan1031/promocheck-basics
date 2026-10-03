@@ -93,4 +93,4 @@ Paired Chinese charts consume the same evaluator. Both share a maximum absolute 
 
 
 ## Public Repository — October 3, 2026
-https://github.com/guannan1031/promocheck-basics , branch `master`. README and required planning documents verified anonymously. Video hosting and Devpost submission receipt remain pending; see `../docs/DELIVERY_STATUS.md`.
+https://github.com/guannan1031/promocheck-basics , branch `master`. README and required planning documents verified anonymously. Public demo: https://youtu.be/NswEma0t0XA . Devpost submission receipt remains pending; see `../docs/DELIVERY_STATUS.md`.
