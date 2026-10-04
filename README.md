@@ -77,4 +77,4 @@ English: Browser-local promotion preflight with explicit configuration rules, in
 
 ## 2026-10-03 公开演示视频
 
-[观看90秒英文界面演示](https://youtu.be/NswEma0t0XA)。视频已公开；Devpost正式提交及回执尚未完成，见[交付状态](docs/DELIVERY_STATUS.md)。
+[观看90秒有声英文演示](https://youtu.be/RqiqaF2xofE)。视频已公开，包含电商场景标题、英文口播和中英烧录字幕；Devpost正式提交及回执尚未完成，见[交付状态](docs/DELIVERY_STATUS.md)。

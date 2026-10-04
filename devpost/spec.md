@@ -155,4 +155,4 @@ assessRisk按原参加活动保留fixed投入，销量按100/80/50/0%向下取�
 
 
 ## Public repository — 2026-10-03
-https://github.com/guannan1031/promocheck-basics ，master分支；已匿名核验README和必需规划文件。公开视频：https://youtu.be/NswEma0t0XA 。Devpost提交回执仍待，详见docs/DELIVERY_STATUS.md。
+https://github.com/guannan1031/promocheck-basics ，master分支；已匿名核验README和必需规划文件。公开视频：https://youtu.be/RqiqaF2xofE 。该版本含电商场景说明、英文口播和中英字幕；Devpost提交回执仍待，详见docs/DELIVERY_STATUS.md。
